@@ -15,7 +15,7 @@ public:
 	// Sets default values for this pawn's properties
 	ACat();
 
-	UPROPERTY(VisibleAnywhere, BlueprintReadOnly)
+	UPROPERTY(VisibleAnywhere, BlueprintReadWrite)
 	float Saturation;
 
 	UPROPERTY(EditAnywhere)
