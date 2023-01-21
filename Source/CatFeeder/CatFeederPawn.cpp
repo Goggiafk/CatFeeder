@@ -1,6 +1,8 @@
 // Fill out your copyright notice in the Description page of Project Settings.
 
 #include "CatFeederPawn.h"
+
+#include "Cat.h"
 #include "Camera/CameraComponent.h"
 
 // Sets default values
@@ -10,6 +12,7 @@ ACatFeederPawn::ACatFeederPawn()
 	PrimaryActorTick.bCanEverTick = true;
 	UCameraComponent* OurCamera = CreateDefaultSubobject<UCameraComponent>(TEXT("OurCamera"));
 	OurCamera->SetupAttachment(RootComponent);
+	PickedFoodType = 0;
 }
 
 // Called when the game starts or when spawned
@@ -24,18 +27,23 @@ void ACatFeederPawn::BeginPlay()
 	}
 }
 
+void ACatFeederPawn::SetFoodType(int foodId)
+{
+	PickedFoodType = foodId;
+	UE_LOG(LogTemp, Warning, TEXT("Hello %d"), PickedFoodType);
+}
+
 // Called every frame
 void ACatFeederPawn::Tick(float DeltaTime)
 {
 	Super::Tick(DeltaTime);
-
+	
 }
 
 // Called to bind functionality to input
 void ACatFeederPawn::SetupPlayerInputComponent(UInputComponent* PlayerInputComponent)
 {
 	Super::SetupPlayerInputComponent(PlayerInputComponent);
-
 }
 
 void ACatFeederPawn::MovePosition(float position)

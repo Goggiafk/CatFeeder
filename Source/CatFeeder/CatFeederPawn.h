@@ -21,6 +21,12 @@ public:
 		TSubclassOf<UUserWidget> Cat_Hud;
 	UUserWidget* Cat_Hud_Widget;
 
+	UPROPERTY(VisibleAnywhere, BlueprintReadWrite)
+	int PickedFoodType = 0;
+
+	UFUNCTION(BlueprintCallable)
+		void SetFoodType(int foodId);
+
 protected:
 	// Called when the game starts or when spawned
 	virtual void BeginPlay() override;

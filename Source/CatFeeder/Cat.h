@@ -20,7 +20,13 @@ public:
 
 	UPROPERTY(EditAnywhere)
 	float Saturation_Threshold = 3.0f;
+	
+	UPROPERTY(VisibleAnywhere, BlueprintReadWrite)
+	int FoodType = 0;
 
+	UFUNCTION(BlueprintCallable)
+		void SetFoodType(int type);
+	
 	bool bDead;
 	
 	// UPROPERTY(EditAnywhere, Category = "UI_HUD")

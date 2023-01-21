@@ -12,6 +12,13 @@ ACat::ACat()
 	PrimaryActorTick.bCanEverTick = true;
 	Saturation = 100;
 	bDead = false;
+	FoodType = 0;
+}
+
+
+void ACat::SetFoodType(int type)
+{
+	FoodType = type;
 }
 
 // Called when the game starts or when spawned
@@ -37,11 +44,14 @@ void ACat::Tick(float DeltaTime)
 		if(!bDead)
 		{
 			bDead = true;
-
+			UE_LOG(LogTemp, Warning, TEXT("Ded"));
 			this->Destroy();
 		}
 	}
+
+	//UE_LOG(LogTemp, Warning, TEXT("Bye %d"), FoodType);
 }
+
 
 // Called to bind functionality to input
 void ACat::SetupPlayerInputComponent(UInputComponent* PlayerInputComponent)
