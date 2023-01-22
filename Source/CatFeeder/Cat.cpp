@@ -10,7 +10,7 @@ ACat::ACat()
 {
  	// Set this pawn to call Tick() every frame.  You can turn this off to improve performance if you don't need it.
 	PrimaryActorTick.bCanEverTick = true;
-	Saturation = 100;
+	Saturation = 70;
 	bDead = false;
 	FoodType = 0;
 }
