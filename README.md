@@ -1,7 +1,10 @@
 # Cat Feeder  
-[![Play on itch.io](https://img.shields.io/badge/Play-on-itch.io-purple?logo=itch.io&logoColor=white&style=for-the-badge)](https://k1rbo.itch.io/cat-feeder)
+[![Play on itch.io](https://img.shields.io/badge/itch.io-Play%20Now-%23FF0B34?logo=itch.io&logoColor=white&style=for-the-badge)](https://goggi.itch.io/cat-feeder)
+
 
 My first Unreal Engine project for Itch.Io gamejam: simple game about feeding cats on time.
+
+Made in: Unreal Engine/Blueprints
 
 ### ✨ Features
 - Cat feeding mechanics.  
